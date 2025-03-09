@@ -8,4 +8,5 @@ public interface IStudentsRepository
     Student GetStudentById(long Id);
     List<Student> FilterStudentsBySpecialization(string specialization);
     List<Student> FilterStudentsByFaculty(string faculty);
+    void UpdateStudent(Student updatedStudent);
 }
