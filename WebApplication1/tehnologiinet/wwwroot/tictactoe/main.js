@@ -16,26 +16,34 @@ let turnslogo = [];
 var text_box;
 
 function restart() {
-    let playerXInput = document.getElementById("playerX");
-    let playerOInput = document.getElementById("playerO");
+    let playerX = document.getElementById("playerX").value;
+    let playerO = document.getElementById("playerO").value;    
 
-    if (!playerXInput || !playerOInput) {
-        console.error("Input elements not found!");
-        return;
-    }
+    //replace <div class="player-input" id="playerXContainer">
+        //<label for="playerX">Player X Name:</label>
+        //<input type="text" id="playerX" placeholder="Enter X's name">
+    //</div> with <div class="player-name" id="playerX">Player X: </div>
+    //let playerXContainer = document.getElementById("playerXContainer");
+    //playerXContainer.innerHTML = `<div class="player-name" id="playerX">Player X: ${playerX}</div>`;
 
-    let playerX = playerXInput.value.trim();
-    let playerO = playerOInput.value.trim();
+    //replace <div class="player-input" id="playerOContainer">
+        //<label for="playerO">Player O Name:</label>
+        //<input type="text" id="playerO" placeholder="Enter O's name">
+    //</div> with <div class="player-name" id="playerO">Player O: </div>
+    //let playerOContainer = document.getElementById("playerOContainer");
+    //playerOContainer.innerHTML = `<div class="player-name" id="playerO">Player O: ${playerO}</div>`;
 
-    if (playerX === "") playerX = "Player X";
-    if (playerO === "") playerO = "Player O";
+    //this doesn't work
 
-    // Update the display text without using innerHTML
-    let playerXContainer = document.getElementById("playerXContainer");
-    let playerOContainer = document.getElementById("playerOContainer");
+    let playerXContainer = document.getElementById("playerX");
+    playerXContainer.textContent = `Player X: ${playerX}`;
 
-    playerXContainer.textContent = `X: ${playerX}`;
-    playerOContainer.textContent = `O: ${playerO}`;
+    let playerOContainer = document.getElementById("playerO");
+    playerOContainer.textContent = `Player O: ${playerO}`;
+
+    
+
+
 
     win = 0;
     c = [0,0,0,0,0,0,0,0,0,0];
@@ -61,6 +69,9 @@ function restart() {
     
     turnslogx = [];
     turnslogo = [];
+
+    text_box = document.getElementById("box2-1");
+    text_box.textContent = "XX";
 }
 
 function check3turns(x) {
