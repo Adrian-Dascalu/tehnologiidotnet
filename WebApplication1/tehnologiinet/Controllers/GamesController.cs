@@ -33,14 +33,15 @@ public class GamesController : ControllerBase
 
         var student = _studentsRepository.GetStudentByUsername(result.Username!);
         
-        if (student == null)
-        {
-            return NotFound("Student not found");
-        }
+        //if (student == null)
+        //{
+            //return NotFound("Student not found");
+        //}
+        
 
         if (result.Win == 1)
         {
-            student.Wins++;
+            //student.Wins++;
 
             // increase the win in the database User table
             var user = _context.Users.FirstOrDefault(u => u.UserName == result.Username);
@@ -49,10 +50,18 @@ public class GamesController : ControllerBase
                 user.Wins++;
                 _context.SaveChanges();
             }
+            else
+            {
+                //else add user by username
+                var newUser = new User { Name = result.Username, UserName = result.Username, Loses = 0, Wins = 1 };
+                var userRepository = new UserRepository(_context);
+                userRepository.AddUser(newUser);
+                _context.SaveChanges();
+            }
         }
         else if (result.Lose == 1)
         {
-            student.Losses++;
+            //student.Losses++;
 
             // increase the lose in the database User table
             var user = _context.Users.FirstOrDefault(u => u.UserName == result.Username);
@@ -61,11 +70,19 @@ public class GamesController : ControllerBase
                 user.Loses++;
                 _context.SaveChanges();
             }
+            else
+            {
+                //else add user by username
+                var newUser = new User { Name = result.Username, UserName = result.Username, Loses = 1, Wins = 0 };
+                var userRepository = new UserRepository(_context);
+                userRepository.AddUser(newUser);
+                _context.SaveChanges();
+            }
         }
 
-        _studentsRepository.UpdateStudent(student); // Ensure this updates the data source
+        //_studentsRepository.UpdateStudent(student); // Ensure this updates the data source
 
-        return Ok(student);
+        return Ok(User);
     }
 
     // DTO to match the expected JSON body
