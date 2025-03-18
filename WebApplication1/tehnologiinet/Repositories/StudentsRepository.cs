@@ -15,6 +15,11 @@ public class StudentsRepository: IStudentsRepository
         return GetAllStudentsFromDb().FirstOrDefault(x => x.Id == Id)!;
     }
 
+    public Student GetStudentByUsername(string username)
+    {
+        return GetAllStudentsFromDb().FirstOrDefault(x => x.Username == username)!;
+    }
+
     public List<Student> FilterStudentsBySpecialization(string specialization)
     {
        return GetAllStudentsFromDb().Where(x => x.Specialization == specialization).ToList();
@@ -78,6 +83,7 @@ public class StudentsRepository: IStudentsRepository
                Specialization = "Calculatoare",
                Wins = 0,
                Losses = 0,
+               Username = "john_doe",
            };
            
            var student2 = new Student
@@ -97,6 +103,7 @@ public class StudentsRepository: IStudentsRepository
                Specialization = "Calculatoare",
                Wins = 0,
                Losses = 0,
+               Username = "jane_doe",
            };
            
            var student3 = new Student
@@ -116,6 +123,7 @@ public class StudentsRepository: IStudentsRepository
                Specialization = "Automatica si Informatica Aplicata",
                Wins = 0,
                Losses = 0,
+               Username = "jane_popescu",
            };
            
             studentsRetrieved.Add(student1);

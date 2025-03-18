@@ -13,8 +13,9 @@
     "University": "Universitatea Tehnica",
     "Faculty": "Automatica si Calculatoare",
     "Specialization": "Calculatoare",
-    "Wins": 0,
-    "Losses": 32
+    "Wins": 72,
+    "Losses": 65,
+    "Username": "john_doe"
   },
   {
     "Id": 2,
@@ -30,8 +31,9 @@
     "University": "Universitatea Tehnica",
     "Faculty": "Automatica si Calculatoare",
     "Specialization": "Calculatoare",
-    "Wins": 0,
-    "Losses": 0
+    "Wins": 3,
+    "Losses": 9,
+    "Username": "jane_doe"
   },
   {
     "Id": 3,
@@ -48,6 +50,7 @@
     "Faculty": "Automatica si Calculatoare",
     "Specialization": "Automatica si Informatica Aplicata",
     "Wins": 0,
-    "Losses": 0
+    "Losses": 0,
+    "Username": "jane_popescu"
   }
 ]

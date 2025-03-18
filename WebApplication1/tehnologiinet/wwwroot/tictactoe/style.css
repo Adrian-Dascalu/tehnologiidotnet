@@ -22,8 +22,36 @@ h1 {
 
 .player-input {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    vertical-align: auto;
+}
+
+.button-log-in {
+    background-color: rgb(250, 250, 250);
+    color:rgb(205, 136, 46);
+    border: none;
+    border-radius: 3px;
+    width: 60px;
+    height: 20px;
+    vertical-align: middle;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.button-log-off {
+    background-color: rgb(250, 250, 250);
+    color:rgb(205, 136, 46);
+    border: none;
+    border-radius: 3px;
+    width: 60px;
+    height: 20px;
+    vertical-align: middle;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    margin-left: 10px;
+    cursor: pointer;
 }
 
 .disappearing {
