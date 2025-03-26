@@ -20,4 +20,7 @@ public class DatabaseContext: DbContext
     public DbSet<Student> Students { get; set; }
     public DbSet<Faculty> Faculties { get; set; }
     public DbSet<Specialization> Specializations { get; set; }
+    public DbSet<Product> Products { get; set; }
+    public DbSet<Review> Reviews { get; set; }
+    public DbSet<Category> Categories { get; set; }
 }
