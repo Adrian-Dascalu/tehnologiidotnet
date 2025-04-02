@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using tehnologiinet.Models;
@@ -46,6 +47,7 @@ public class StudentController: ControllerBase
 
 
     [HttpGet]
+    
     public IActionResult GetStudentsTest()
     {
         using (var db = new DatabaseContext())
@@ -66,10 +68,21 @@ public class StudentController: ControllerBase
     
     
     [HttpGet]
+    [Authorize]
     public IActionResult GetStudents()
     {
-        
-        return Ok(_studentsRepository.GetAllStudents());
+        var claims = User.Claims;
+
+        foreach (var claim in claims)
+        {
+            if (claim.Value == "AIA" && claim.Type == "Specializarea")
+            {
+                return Ok(_studentsRepository.GetAllStudents());
+            }
+            
+        }
+
+        return NotFound();
     }
 
     [HttpGet]
