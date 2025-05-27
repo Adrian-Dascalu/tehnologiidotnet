@@ -1,4 +1,4 @@
-namespace tehnologiinet.NewDirectory1;
+namespace tehnologiinet.Entities;
 
 public class Faculty
 {

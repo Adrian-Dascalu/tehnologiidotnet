@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using tehnologiinet.Models;
-using tehnologiinet.NewDirectory1;
+using tehnologiinet.Entities;
 using tehnologiinet.Repositories;
 
 namespace tehnologiinet.Controllers;
@@ -47,7 +47,6 @@ public class StudentController: ControllerBase
 
 
     [HttpGet]
-    
     public IActionResult GetStudentsTest()
     {
         using (var db = new DatabaseContext())

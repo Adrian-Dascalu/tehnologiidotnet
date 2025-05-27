@@ -33,7 +33,7 @@ public class AccountController: ControllerBase
         {
             // generate jwt token
             var key = Encoding.ASCII.GetBytes("lkgjnsdfkljngfdiyerthiyortegjklfjdnbvxcbxfdkogjrpoiyuteroyigjdf4359859046845");
-            var tokenValidityInMinutes = 3;
+            var tokenValidityInMinutes = 30;
 
             var user = await _userManager.FindByEmailAsync(model.Email);
             
@@ -69,7 +69,6 @@ public class AccountController: ControllerBase
         {
             return BadRequest("Invalid login attempt.");
         }
-        
     }
 
 
@@ -99,7 +98,4 @@ public class AccountController: ControllerBase
 
         return Ok();
     }
-    
-    
-    
 }

@@ -1,4 +1,4 @@
-using tehnologiinet.NewDirectory1;
+using tehnologiinet.Entities;
 
 namespace tehnologiinet.Interfaces;
 

@@ -1,5 +1,5 @@
 using tehnologiinet.Interfaces;
-using tehnologiinet.NewDirectory1;
+using tehnologiinet.Entities;
 
 namespace tehnologiinet.Repositories;
 

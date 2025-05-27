@@ -19,14 +19,12 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser, IdentityR
     {
         if (!optionsBuilder.IsConfigured)
         {
-           
-            optionsBuilder.UseNpgsql("Host=localhost;Database=tehnologiinet;Username=postgres;Password=parkingshare");
+            optionsBuilder.UseNpgsql("Host=localhost;Database=factorio;Username=postgres;Password=postgres");
         }
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
-        // Customize the ASP.NET Identity model and override the defaults if needed.
     }
 }

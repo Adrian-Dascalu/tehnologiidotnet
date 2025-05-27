@@ -1,0 +1,20 @@
+{
+  "Version": 1,
+  "Hash": "JfCXO+9OIp0Kx2ZauPJB5xylGQRETmHl9s2WJGnknxY=",
+  "Source": "tehnologiinet",
+  "BasePath": "_content/tehnologiinet",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "tehnologiinet\\wwwroot",
+      "Source": "tehnologiinet",
+      "ContentRoot": "C:\\Users\\adiad\\Desktop\\factorio2\\tehnologiidotnet\\WebApplication1\\tehnologiinet\\wwwroot\\",
+      "BasePath": "_content/tehnologiinet",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [],
+  "Endpoints": []
+}

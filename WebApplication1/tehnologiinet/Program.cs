@@ -14,13 +14,14 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IMyFirstServiceInterface, MyFirstService>();
 builder.Services.AddScoped<IStudentsRepository, StudentsRepository>();
+builder.Services.AddScoped<IFactorioRepository, FactorioRepository>();
 
 // Register both database contexts
 builder.Services.AddDbContext<ApplicationDbContext>(options => 
-    options.UseNpgsql("Host=localhost;Database=tehnologiinet;Username=postgres;Password=parkingshare"));
+    options.UseNpgsql("Host=localhost;Database=factorio;Username=postgres;Password=postgres"));
 
 builder.Services.AddDbContext<DatabaseContext>(options => 
-    options.UseNpgsql("Host=localhost;Database=tehnologiinet;Username=postgres;Password=parkingshare"));
+    options.UseNpgsql("Host=localhost;Database=factorio;Username=postgres;Password=postgres"));
 
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>()
@@ -69,6 +70,12 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseStaticFiles();
+
+app.UseRouting();
+
+app.UseCors();
 
 app.UseHttpsRedirection();
 
