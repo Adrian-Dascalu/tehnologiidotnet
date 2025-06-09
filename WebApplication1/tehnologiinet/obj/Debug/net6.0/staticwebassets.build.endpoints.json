@@ -1,5 +1,88 @@
 {
   "Version": 1,
   "ManifestType": "Build",
-  "Endpoints": []
+  "Endpoints": [
+    {
+      "Route": "swagger-ui/a_generic_industrial-themed_character_holding_their_hand_in_an__OK__sign.ehpkosa42k.png",
+      "AssetFile": "swagger-ui/a_generic_industrial-themed_character_holding_their_hand_in_an__OK__sign.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2759183"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/pm+VmaM/YKeYoKF1tHxHhPp//0TU7zWi0PwsNw8+s4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 27 May 2025 18:49:35 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ehpkosa42k"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-/pm+VmaM/YKeYoKF1tHxHhPp//0TU7zWi0PwsNw8+s4="
+        },
+        {
+          "Name": "label",
+          "Value": "swagger-ui/a_generic_industrial-themed_character_holding_their_hand_in_an__OK__sign.png"
+        }
+      ]
+    },
+    {
+      "Route": "swagger-ui/a_generic_industrial-themed_character_holding_their_hand_in_an__OK__sign.png",
+      "AssetFile": "swagger-ui/a_generic_industrial-themed_character_holding_their_hand_in_an__OK__sign.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2759183"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/pm+VmaM/YKeYoKF1tHxHhPp//0TU7zWi0PwsNw8+s4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 27 May 2025 18:49:35 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-/pm+VmaM/YKeYoKF1tHxHhPp//0TU7zWi0PwsNw8+s4="
+        }
+      ]
+    }
+  ]
 }

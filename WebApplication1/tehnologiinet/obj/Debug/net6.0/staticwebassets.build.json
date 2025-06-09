@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "JfCXO+9OIp0Kx2ZauPJB5xylGQRETmHl9s2WJGnknxY=",
+  "Hash": "zmNYqVk68txotv1sd0DlLtB597fOKb5E8XWC/PdbCPc=",
   "Source": "tehnologiinet",
   "BasePath": "_content/tehnologiinet",
   "Mode": "Default",
@@ -15,6 +15,111 @@
       "Pattern": "**"
     }
   ],
-  "Assets": [],
-  "Endpoints": []
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\adiad\\Desktop\\factorio2\\tehnologiidotnet\\WebApplication1\\tehnologiinet\\wwwroot\\swagger-ui\\a_generic_industrial-themed_character_holding_their_hand_in_an__OK__sign.png",
+      "SourceId": "tehnologiinet",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\adiad\\Desktop\\factorio2\\tehnologiidotnet\\WebApplication1\\tehnologiinet\\wwwroot\\",
+      "BasePath": "_content/tehnologiinet",
+      "RelativePath": "swagger-ui/a_generic_industrial-themed_character_holding_their_hand_in_an__OK__sign#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ehpkosa42k",
+      "Integrity": "/pm+VmaM/YKeYoKF1tHxHhPp//0TU7zWi0PwsNw8+s4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\swagger-ui\\a_generic_industrial-themed_character_holding_their_hand_in_an__OK__sign.png"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "swagger-ui/a_generic_industrial-themed_character_holding_their_hand_in_an__OK__sign.ehpkosa42k.png",
+      "AssetFile": "C:\\Users\\adiad\\Desktop\\factorio2\\tehnologiidotnet\\WebApplication1\\tehnologiinet\\wwwroot\\swagger-ui\\a_generic_industrial-themed_character_holding_their_hand_in_an__OK__sign.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2759183"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/pm+VmaM/YKeYoKF1tHxHhPp//0TU7zWi0PwsNw8+s4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 27 May 2025 18:49:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ehpkosa42k"
+        },
+        {
+          "Name": "label",
+          "Value": "swagger-ui/a_generic_industrial-themed_character_holding_their_hand_in_an__OK__sign.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-/pm+VmaM/YKeYoKF1tHxHhPp//0TU7zWi0PwsNw8+s4="
+        }
+      ]
+    },
+    {
+      "Route": "swagger-ui/a_generic_industrial-themed_character_holding_their_hand_in_an__OK__sign.png",
+      "AssetFile": "C:\\Users\\adiad\\Desktop\\factorio2\\tehnologiidotnet\\WebApplication1\\tehnologiinet\\wwwroot\\swagger-ui\\a_generic_industrial-themed_character_holding_their_hand_in_an__OK__sign.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2759183"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/pm+VmaM/YKeYoKF1tHxHhPp//0TU7zWi0PwsNw8+s4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 27 May 2025 18:49:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-/pm+VmaM/YKeYoKF1tHxHhPp//0TU7zWi0PwsNw8+s4="
+        }
+      ]
+    }
+  ]
 }

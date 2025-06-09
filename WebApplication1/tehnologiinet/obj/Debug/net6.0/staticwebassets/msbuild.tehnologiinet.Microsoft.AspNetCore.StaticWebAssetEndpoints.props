@@ -1,16 +1,16 @@
 ﻿<Project>
   <ItemGroup>
-    <StaticWebAssetEndpoint Include="_content/tehnologiinet/swagger-ui/custom.js">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\swagger-ui\custom.js'))</AssetFile>
+    <StaticWebAssetEndpoint Include="_content/tehnologiinet/swagger-ui/a_generic_industrial-themed_character_holding_their_hand_in_an__OK__sign.ehpkosa42k.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\swagger-ui\a_generic_industrial-themed_character_holding_their_hand_in_an__OK__sign.png'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-y9eqJbQkJ\u002Bgax4qIIY0CHT242ZPLkea30B8Aso\u002B\u002Blpw="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"2122"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022y9eqJbQkJ\u002Bgax4qIIY0CHT242ZPLkea30B8Aso\u002B\u002Blpw=\u0022"},{"Name":"Last-Modified","Value":"Tue, 27 May 2025 17:05:54 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"ehpkosa42k"},{"Name":"integrity","Value":"sha256-/pm\u002BVmaM/YKeYoKF1tHxHhPp//0TU7zWi0PwsNw8\u002Bs4="},{"Name":"label","Value":"_content/tehnologiinet/swagger-ui/a_generic_industrial-themed_character_holding_their_hand_in_an__OK__sign.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2759183"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022/pm\u002BVmaM/YKeYoKF1tHxHhPp//0TU7zWi0PwsNw8\u002Bs4=\u0022"},{"Name":"Last-Modified","Value":"Tue, 27 May 2025 18:49:35 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/tehnologiinet/swagger-ui/custom.juk5rtlg2j.js">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\swagger-ui\custom.js'))</AssetFile>
+    <StaticWebAssetEndpoint Include="_content/tehnologiinet/swagger-ui/a_generic_industrial-themed_character_holding_their_hand_in_an__OK__sign.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\swagger-ui\a_generic_industrial-themed_character_holding_their_hand_in_an__OK__sign.png'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"juk5rtlg2j"},{"Name":"integrity","Value":"sha256-y9eqJbQkJ\u002Bgax4qIIY0CHT242ZPLkea30B8Aso\u002B\u002Blpw="},{"Name":"label","Value":"_content/tehnologiinet/swagger-ui/custom.js"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2122"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022y9eqJbQkJ\u002Bgax4qIIY0CHT242ZPLkea30B8Aso\u002B\u002Blpw=\u0022"},{"Name":"Last-Modified","Value":"Tue, 27 May 2025 17:05:54 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-/pm\u002BVmaM/YKeYoKF1tHxHhPp//0TU7zWi0PwsNw8\u002Bs4="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"2759183"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022/pm\u002BVmaM/YKeYoKF1tHxHhPp//0TU7zWi0PwsNw8\u002Bs4=\u0022"},{"Name":"Last-Modified","Value":"Tue, 27 May 2025 18:49:35 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
   </ItemGroup>
 </Project>

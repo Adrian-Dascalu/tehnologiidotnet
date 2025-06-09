@@ -32,11 +32,23 @@ public class GamesController : ControllerBase
         
         using (var db = new DatabaseContext())
         {
+            // Get all existing productions for efficient lookup
+            var existingProductions = db.Productions
+                .Where(p => productions.Select(np => np.ItemId).Contains(p.ItemId))
+                .ToDictionary(p => p.ItemId);
+
             foreach (var production in productions)
             {
-                var exists = db.Productions.Any(p => p.Id == production.Id);
-                if (!exists)
+                if (existingProductions.TryGetValue(production.ItemId, out var existingProduction))
                 {
+                    // Update existing production
+                    existingProduction.TotalQuantity = production.TotalQuantity;
+                    existingProduction.Name = production.Name;
+                    db.Productions.Update(existingProduction);
+                }
+                else
+                {
+                    // Add new production
                     db.Productions.Add(production);
                 }
             }
@@ -54,11 +66,23 @@ public class GamesController : ControllerBase
         
         using (var db = new DatabaseContext())
         {
+            // Get all existing consumptions for efficient lookup
+            var existingConsumptions = db.Consumptions
+                .Where(c => consumptions.Select(nc => nc.ItemId).Contains(c.ItemId))
+                .ToDictionary(c => c.ItemId);
+
             foreach (var consumption in consumptions)
             {
-                var exists = db.Consumptions.Any(c => c.Id == consumption.Id);
-                if (!exists)
+                if (existingConsumptions.TryGetValue(consumption.ItemId, out var existingConsumption))
                 {
+                    // Update existing consumption
+                    existingConsumption.TotalQuantity = consumption.TotalQuantity;
+                    existingConsumption.Name = consumption.Name;
+                    db.Consumptions.Update(existingConsumption);
+                }
+                else
+                {
+                    // Add new consumption
                     db.Consumptions.Add(consumption);
                 }
             }
@@ -94,17 +118,23 @@ public class GamesController : ControllerBase
     [HttpPost("LoadItemsFromJson")]
     public IActionResult LoadItems()
     {
+        var items = _factorioRepository.LoadItemsFromJson();
+        
         using (var db = new DatabaseContext())
         {
-            foreach (var item in _factorioRepository.LoadItemsFromJson())
+            foreach (var item in items)
             {
-                db.Items.Add(item);
+                var exists = db.Items.Any(i => i.Id == item.Id);
+                if (!exists)
+                {
+                    db.Items.Add(item);
+                }
             }
 
             db.SaveChanges();
         }
         
-        return Ok(_factorioRepository.LoadItemsFromJson());
+        return Ok(items);
     }
 
     [HttpPost("AddItem")]

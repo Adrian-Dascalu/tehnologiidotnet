@@ -6,15 +6,44 @@ using Microsoft.IdentityModel.Tokens;
 using tehnologiinet;
 using tehnologiinet.Interfaces;
 using tehnologiinet.Repositories;
+using tehnologiinet.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddControllers();
+builder.Services.AddControllers()
+    .AddJsonOptions(x =>
+        x.JsonSerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles);
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(c =>
+{
+    c.AddSecurityDefinition("Bearer", new Microsoft.OpenApi.Models.OpenApiSecurityScheme
+    {
+        Description = "JWT Authorization header using the Bearer scheme. Example: \"Authorization: Bearer {token}\"",
+        Name = "Authorization",
+        In = Microsoft.OpenApi.Models.ParameterLocation.Header,
+        Type = Microsoft.OpenApi.Models.SecuritySchemeType.ApiKey,
+        Scheme = "Bearer"
+    });
+
+    c.AddSecurityRequirement(new Microsoft.OpenApi.Models.OpenApiSecurityRequirement
+    {
+        {
+            new Microsoft.OpenApi.Models.OpenApiSecurityScheme
+            {
+                Reference = new Microsoft.OpenApi.Models.OpenApiReference
+                {
+                    Type = Microsoft.OpenApi.Models.ReferenceType.SecurityScheme,
+                    Id = "Bearer"
+                }
+            },
+            Array.Empty<string>()
+        }
+    });
+});
 builder.Services.AddScoped<IMyFirstServiceInterface, MyFirstService>();
 builder.Services.AddScoped<IStudentsRepository, StudentsRepository>();
 builder.Services.AddScoped<IFactorioRepository, FactorioRepository>();
+builder.Services.AddScoped<IEmailService, EmailService>();
 
 // Register both database contexts
 builder.Services.AddDbContext<ApplicationDbContext>(options => 
